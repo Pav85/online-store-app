@@ -1,14 +1,21 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
+import Home from "./components/home/Home";
+import Products from "./components/products/Products";
+import About from "./components/about/About";
 
 function App() {
   return (
     <div>
-      <Container>
+      <Router>
         <NavBar />
-      </Container>
-      ;
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
