@@ -10,7 +10,7 @@ const NavBar = () => {
       <Navbar.Brand href="/">Online Store</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="ms-auto">
           <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
           <Nav.Link onClick={() => navigate("/products")}>Products</Nav.Link>
           <Nav.Link onClick={() => navigate("/about")}>About</Nav.Link>
