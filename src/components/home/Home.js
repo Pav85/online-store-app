@@ -16,12 +16,16 @@ const Home = () => {
     setName("");
   };
 
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   return (
     <Container className="mt-3">
       <Row className="justify-content-center mb-3">
         <Col md={4}>
           {!loggedIn ? (
-            <Form>
+            <Form className="mt-5">
               <Form.Group controlId="formName">
                 <h4 className="text-center mb-3 main-heading">Login</h4>
                 <Form.Control
@@ -40,8 +44,8 @@ const Home = () => {
               </Button>
             </Form>
           ) : (
-            <div>
-              <h1>Hello</h1>
+            <div className="mt-5">
+              <h1>Welcome {capitalizeFirstLetter(name)}!</h1>
             </div>
           )}
         </Col>
