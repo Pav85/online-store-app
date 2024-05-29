@@ -48,6 +48,7 @@ const Products = () => {
       {totalPrice > 0 && <TotalPrice total={totalPrice} />}
       <Container className="mt-5">
         <Row>
+          <h1 className="text-center">Products</h1>
           {products.map((product) => (
             <Col key={product.id} sm={12} md={6} lg={4} className="mb-3">
               <Card>
