@@ -45,16 +45,16 @@ const Products = () => {
 
   return (
     <div className="container mt-3">
-      {totalPrice > 0 && <TotalPrice total={totalPrice} />}
       <Container className="mt-5">
+        {totalPrice > 0 && <TotalPrice total={totalPrice} />}
         <Row>
           {products.map((product) => (
-            <Col key={product.id} sm={12} md={6} lg={4} className="mb-3">
+            <Col key={product.id} sm={12} md={6} lg={4} className="mb-3 mt-3">
               <Card>
                 <Card.Img
                   variant="top"
                   src={product.image}
-                  className="card-img"
+                  className="card-img mt-3"
                 />
                 <Card.Body className="card-body-custom">
                   <Card.Title>{product.title}</Card.Title>

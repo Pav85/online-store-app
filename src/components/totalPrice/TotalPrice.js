@@ -1,10 +1,21 @@
 import React from "react";
+import { Card } from "react-bootstrap";
+import "./TotalPrice.css";
 
 const TotalPrice = ({ total }) => {
   return (
-    <div className="total-price">
-      <h2>Total price: ${total}</h2>
-    </div>
+    <Card className="total-price-card">
+      <Card.Body>
+        <Card.Title>
+          <h2>Total Price</h2>
+        </Card.Title>
+        <Card.Text className="mt-3">
+          <h5>
+            <strong>£{total.toFixed(2)}</strong>
+          </h5>
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 
