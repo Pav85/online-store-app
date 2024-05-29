@@ -16,6 +16,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedColor, setSelectedColor] = useState({});
+  const [isTotalPriceVisible, setIsTotalPriceVisible] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -41,16 +42,17 @@ const Products = () => {
 
   const handleBuy = (price) => {
     setTotalPrice(totalPrice + price);
+    setIsTotalPriceVisible(true);
   };
 
   return (
     <div className="container mt-3">
-      {totalPrice > 0 && <TotalPrice total={totalPrice} />}
       <Container className="mt-5">
+        <TotalPrice total={totalPrice} isVisible={isTotalPriceVisible} />
         <Row>
           <h1 className="text-center">Products</h1>
           {products.map((product) => (
-            <Col key={product.id} sm={12} md={6} lg={4} className="mb-3">
+            <Col key={product.id} sm={12} md={6} lg={4} className="mb-3 mt-2">
               <Card>
                 <Card.Img
                   variant="top"

@@ -6,3 +6,7 @@
   z-index: 1000;
   display: none !important;
 }
+
+.total-price-card.visible {
+  display: block;
+}
