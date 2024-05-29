@@ -6,7 +6,9 @@ const Home = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    setLoggedIn(true);
+    if (name.trim()) {
+      setLoggedIn(true);
+    }
   };
 
   const handleLogout = () => {
