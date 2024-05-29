@@ -1,19 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
+  useEffect(() => {
+    const storedName = localStorage.getItem("name");
+    const storedLoggedIn = localStorage.getItem("loggedIn");
+
+    if (storedLoggedIn === "true" && storedName) {
+      setName(storedName);
+      setLoggedIn(true);
+    }
+  }, []);
+
   const handleLogin = () => {
     if (name.trim()) {
       setLoggedIn(true);
+      localStorage.setItem("name", name);
+      localStorage.setItem("loggedIn", "true");
     }
   };
 
   const handleLogout = () => {
     setLoggedIn(false);
     setName("");
+    localStorage.removeItem("name");
+    localStorage.removeItem("loggedIn");
   };
 
   const capitalizeFirstLetter = (str) => {
