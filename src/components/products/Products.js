@@ -52,7 +52,7 @@ const Products = () => {
                   <Card.Title>{product.title}</Card.Title>
                   <Card.Text>{product.description}</Card.Text>
                   <Card.Text>
-                    <strong>${product.price}</strong>
+                    <strong>£{product.price}</strong>
                   </Card.Text>
                   <DropdownButton
                     id={`dropdown-basic-button-${product.id}`}
