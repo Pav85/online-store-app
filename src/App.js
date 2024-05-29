@@ -48,15 +48,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/about"
-            element={
-              <About
-                totalPrice={totalPrice}
-                isTotalPriceVisible={isTotalPriceVisible}
-              />
-            }
-          />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>

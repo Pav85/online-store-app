@@ -1,17 +1,18 @@
 import React from "react";
-import { Container, Row, Col, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure, Carousel } from "react-bootstrap";
 import storeLogo from "../../assets/my-online-store-high-resolution-logo-black.png";
 import storeImage1 from "../../assets/store.png";
 import storeImage2 from "../../assets/store2.png";
+import storeImage3 from "../../assets/store3.png";
 
-const About = ({ totalPrice, isTotalPriceVisible }) => {
+const About = () => {
   return (
     <Container className="mt-3">
-      <Row className="justify-content-center mb-3">
-        <Col md={4}>
+      <Row className="justify-content-center mb-3 align-items-center">
+        <Col md={4} className="pt-5">
           <Figure>
             <Figure.Image
-              width={400}
+              width={500}
               height="auto"
               alt="store-logo"
               src={storeLogo}
@@ -19,7 +20,7 @@ const About = ({ totalPrice, isTotalPriceVisible }) => {
           </Figure>
         </Col>
         <Col md={8}>
-          <h1 className="mt-5  text-center">About Us </h1>
+          <h1 className="mt-5 text-center">About Us </h1>
           <p className="mt-3">
             Welcome to <strong>My Online Store!</strong> We specialize in
             offering a little bit of everything when it comes to accessories.
@@ -30,6 +31,61 @@ const About = ({ totalPrice, isTotalPriceVisible }) => {
             collection and find the perfect accessory to enhance your lifestyle.
             Thank you for choosing My Online Store!
           </p>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Col md={4} className="text-center mt-4">
+          <h2 className="text-center fs-2 mt-5 mb-5">Contact Us</h2>
+          <p className="fs-5">
+            <strong>Email:</strong> contact@store.com
+          </p>
+          <p className="fs-5">
+            <strong>Phone:</strong> (123) 456-7890
+          </p>
+        </Col>
+        <Col md={8}>
+          <Carousel className="mb-5">
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={storeImage1}
+                alt="First slide"
+                width={400}
+                height="auto"
+              />
+              <Carousel.Caption>
+                <h3>Our Storefront</h3>
+                <p>A welcoming entrance to our store.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={storeImage2}
+                alt="Second slide"
+                width={400}
+                height="auto"
+              />
+              <Carousel.Caption>
+                <h3>Latest Collections</h3>
+                <p>Discover our latest accessories and gadgets.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={storeImage3}
+                alt="Third slide"
+                // height={350}
+                width={400}
+                height="auto"
+              />
+              <Carousel.Caption>
+                <h3>Customer Favorites</h3>
+                <p>Popular items loved by our customers.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
         </Col>
       </Row>
     </Container>
