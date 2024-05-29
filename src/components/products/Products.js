@@ -38,20 +38,22 @@ const Products = () => {
   return (
     <div className="container mt-3">
       {totalPrice > 0 && <TotalPrice total={totalPrice} />}
-      <Container>
+      <Container className="mt-5">
         <Row>
           {products.map((product) => (
             <Col key={product.id} sm={12} md={6} lg={4} className="mb-3">
-              <Card className="card-custom-size">
+              <Card>
                 <Card.Img
                   variant="top"
                   src={product.image}
                   className="card-img"
                 />
-                <Card.Body>
+                <Card.Body className="card-body-custom">
                   <Card.Title>{product.title}</Card.Title>
                   <Card.Text>{product.description}</Card.Text>
-                  <Card.Text>${product.price}</Card.Text>
+                  <Card.Text>
+                    <strong>${product.price}</strong>
+                  </Card.Text>
                   <DropdownButton
                     id={`dropdown-basic-button-${product.id}`}
                     title={selectedColor[product.id] || "Select Color"}

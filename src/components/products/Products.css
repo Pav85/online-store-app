@@ -1,15 +1,8 @@
-.card-custom-size {
-  /* height: 700px; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-}
-
 .card-body-custom {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .card-img {
