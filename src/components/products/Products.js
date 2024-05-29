@@ -35,6 +35,14 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+  const handleSelectedColor = (productId, color) => {
+    setSelectedColor({ ...selectedColor, [productId]: color });
+  };
+
+  const handleBuy = (price) => {
+    setTotalPrice(totalPrice + price);
+  };
+
   return (
     <div className="container mt-3">
       {totalPrice > 0 && <TotalPrice total={totalPrice} />}
@@ -57,7 +65,7 @@ const Products = () => {
                   <DropdownButton
                     id={`dropdown-basic-button-${product.id}`}
                     title={selectedColor[product.id] || "Select Color"}
-                    onSelect={console.log("color selected")}
+                    onSelect={(e) => handleSelectedColor(product.id, e)}
                   >
                     {product.colors.map((color, index) => (
                       <Dropdown.Item key={index} eventKey={color}>
@@ -65,7 +73,10 @@ const Products = () => {
                       </Dropdown.Item>
                     ))}
                   </DropdownButton>
-                  <Button className="mt-2" onClick={console.log("clicked")}>
+                  <Button
+                    className="mt-2"
+                    onClick={() => handleBuy(product.price)}
+                  >
                     Buy
                   </Button>
                 </Card.Body>
