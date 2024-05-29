@@ -27,7 +27,7 @@ const Home = () => {
           {!loggedIn ? (
             <Form className="mt-5">
               <Form.Group controlId="formName">
-                <h4 className="text-center mb-3 main-heading">Login</h4>
+                <h4 className="text-center mb-3">Login</h4>
                 <Form.Control
                   type="text"
                   placeholder="Enter name"
@@ -45,7 +45,16 @@ const Home = () => {
             </Form>
           ) : (
             <div className="mt-5">
-              <h1>Welcome {capitalizeFirstLetter(name)}!</h1>
+              <h1 className="text-center mb-1">
+                Welcome {capitalizeFirstLetter(name)}!
+              </h1>
+              <Button
+                variant="secondary"
+                onClick={handleLogout}
+                className="mt-3 w-100 text-center"
+              >
+                Logout
+              </Button>
             </div>
           )}
         </Col>
