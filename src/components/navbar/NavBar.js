@@ -6,7 +6,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Navbar bg="light" expand="lg" className="p-1">
+    <Navbar bg="light" expand="lg" className="p-1" fixed="top">
       <Navbar.Brand href="/">Online Store</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

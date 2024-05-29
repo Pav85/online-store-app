@@ -1,12 +1,7 @@
 .total-price-card {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 200px;
+  position: fixed !important;
+  top: 70px;
+  right: 20px;
+  width: 190px;
   z-index: 1000;
-  display: none !important;
-}
-
-.total-price-card.visible {
-  display: block;
 }

@@ -9,14 +9,11 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import TotalPrice from "../totalPrice/TotalPrice";
 import "./Products.css";
 
-const Products = () => {
+const Products = ({ totalPrice, updateTotalPrice }) => {
   const [products, setProducts] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
   const [selectedColor, setSelectedColor] = useState({});
-  const [isTotalPriceVisible, setIsTotalPriceVisible] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -41,54 +38,50 @@ const Products = () => {
   };
 
   const handleBuy = (price) => {
-    setTotalPrice(totalPrice + price);
-    setIsTotalPriceVisible(true);
+    updateTotalPrice(totalPrice + price);
   };
 
   return (
-    <div className="container mt-3">
-      <Container className="mt-5">
-        <TotalPrice total={totalPrice} isVisible={isTotalPriceVisible} />
-        <Row>
-          <h1 className="text-center">Products</h1>
-          {products.map((product) => (
-            <Col key={product.id} sm={12} md={6} lg={4} className="mb-3 mt-2">
-              <Card>
-                <Card.Img
-                  variant="top"
-                  src={product.image}
-                  className="card-img mt-3"
-                />
-                <Card.Body className="card-body-custom">
-                  <Card.Title>{product.title}</Card.Title>
-                  <Card.Text>{product.description}</Card.Text>
-                  <Card.Text>
-                    <strong>£{product.price}</strong>
-                  </Card.Text>
-                  <DropdownButton
-                    id={`dropdown-basic-button-${product.id}`}
-                    title={selectedColor[product.id] || "Select Color"}
-                    onSelect={(e) => handleSelectedColor(product.id, e)}
-                  >
-                    {product.colors.map((color, index) => (
-                      <Dropdown.Item key={index} eventKey={color}>
-                        {color}
-                      </Dropdown.Item>
-                    ))}
-                  </DropdownButton>
-                  <Button
-                    className="mt-2"
-                    onClick={() => handleBuy(product.price)}
-                  >
-                    Buy
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </div>
+    <Container className="mt-5">
+      <Row>
+        <h1 className="text-center mt-5">Products</h1>
+        {products.map((product) => (
+          <Col key={product.id} sm={12} md={6} lg={4} className="mb-3 mt-3">
+            <Card>
+              <Card.Img
+                variant="top"
+                src={product.image}
+                className="card-img mt-3"
+              />
+              <Card.Body className="card-body-custom">
+                <Card.Title>{product.title}</Card.Title>
+                <Card.Text>{product.description}</Card.Text>
+                <Card.Text>
+                  <strong>£{product.price}</strong>
+                </Card.Text>
+                <DropdownButton
+                  id={`dropdown-basic-button-${product.id}`}
+                  title={selectedColor[product.id] || "Select Color"}
+                  onSelect={(e) => handleSelectedColor(product.id, e)}
+                >
+                  {product.colors.map((color, index) => (
+                    <Dropdown.Item key={index} eventKey={color}>
+                      {color}
+                    </Dropdown.Item>
+                  ))}
+                </DropdownButton>
+                <Button
+                  className="mt-2"
+                  onClick={() => handleBuy(product.price)}
+                >
+                  Buy
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
