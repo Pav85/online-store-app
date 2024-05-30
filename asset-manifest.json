@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/my-online-store/static/css/main.ba23d491.css",
-    "main.js": "/my-online-store/static/js/main.c59e6be3.js",
-    "static/media/store3.png": "/my-online-store/static/media/store3.bb6c41e80539374b0582.png",
-    "static/media/store2.png": "/my-online-store/static/media/store2.3e8e8520aa0c1eefb443.png",
-    "static/media/store.png": "/my-online-store/static/media/store.eaa725e66a6d0fdcb96c.png",
-    "static/media/my-online-store-high-resolution-logo-black-transparent.png": "/my-online-store/static/media/my-online-store-high-resolution-logo-black-transparent.276d8854a1e9ef6e5f20.png",
-    "static/media/my-online-store-high-resolution-logo-black.png": "/my-online-store/static/media/my-online-store-high-resolution-logo-black.a92e46390fdf345acfe0.png",
-    "index.html": "/my-online-store/index.html",
-    "main.ba23d491.css.map": "/my-online-store/static/css/main.ba23d491.css.map",
-    "main.c59e6be3.js.map": "/my-online-store/static/js/main.c59e6be3.js.map"
+    "main.css": "/online-store-app/static/css/main.ba23d491.css",
+    "main.js": "/online-store-app/static/js/main.7df5480b.js",
+    "static/media/store3.png": "/online-store-app/static/media/store3.bb6c41e80539374b0582.png",
+    "static/media/store2.png": "/online-store-app/static/media/store2.3e8e8520aa0c1eefb443.png",
+    "static/media/store.png": "/online-store-app/static/media/store.eaa725e66a6d0fdcb96c.png",
+    "static/media/my-online-store-high-resolution-logo-black-transparent.png": "/online-store-app/static/media/my-online-store-high-resolution-logo-black-transparent.276d8854a1e9ef6e5f20.png",
+    "static/media/my-online-store-high-resolution-logo-black.png": "/online-store-app/static/media/my-online-store-high-resolution-logo-black.a92e46390fdf345acfe0.png",
+    "index.html": "/online-store-app/index.html",
+    "main.ba23d491.css.map": "/online-store-app/static/css/main.ba23d491.css.map",
+    "main.7df5480b.js.map": "/online-store-app/static/js/main.7df5480b.js.map"
   },
   "entrypoints": [
     "static/css/main.ba23d491.css",
-    "static/js/main.c59e6be3.js"
+    "static/js/main.7df5480b.js"
   ]
 }
