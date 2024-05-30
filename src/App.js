@@ -11,6 +11,8 @@ import Products from "./components/products/Products";
 import About from "./components/about/About";
 import TotalPrice from "./components/totalPrice/TotalPrice";
 
+// This is a wrapper component for the TotalPrice component.
+// It is responsible for conditional rendering of the TotalPrice component based on current URL path and visibility flag.
 const TotalPriceWrapper = ({ totalPrice, isTotalPriceVisible }) => {
   const location = useLocation();
   const shouldDisplayTotalPrice =
@@ -23,6 +25,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [isTotalPriceVisible, setIsTotalPriceVisible] = useState(false);
 
+  // This function is used to update the total price and visibility flag.
   const updateTotalPrice = (price) => {
     setTotalPrice(price);
     setIsTotalPriceVisible(true);

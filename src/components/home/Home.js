@@ -5,6 +5,7 @@ const Home = () => {
   const [name, setName] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
+  // This hook is used to load the name and loggedIn state from localStorage.
   useEffect(() => {
     const storedName = localStorage.getItem("name");
     const storedLoggedIn = localStorage.getItem("loggedIn");
@@ -15,6 +16,7 @@ const Home = () => {
     }
   }, []);
 
+  // This hook is used to save the name and loggedIn state to localStorage.
   const handleLogin = () => {
     if (!name.trim()) {
       alert("Please enter your name.");
@@ -25,6 +27,7 @@ const Home = () => {
     localStorage.setItem("loggedIn", "true");
   };
 
+  // This hook is used to remove the name and loggedIn state from localStorage.
   const handleLogout = () => {
     setLoggedIn(false);
     setName("");
@@ -32,6 +35,7 @@ const Home = () => {
     localStorage.removeItem("loggedIn");
   };
 
+  // This function is used to capitalize the first letter of a string.
   const capitalizeFirstLetter = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };

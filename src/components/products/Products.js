@@ -15,6 +15,7 @@ const Products = ({ totalPrice, updateTotalPrice }) => {
   const [products, setProducts] = useState([]);
   const [selectedColor, setSelectedColor] = useState({});
 
+  // This hook is used to fetch the products from the API.
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -34,10 +35,12 @@ const Products = ({ totalPrice, updateTotalPrice }) => {
     fetchProducts();
   }, []);
 
+  // This function is used to update the selected color of a product.
   const handleSelectedColor = (productId, color) => {
     setSelectedColor({ ...selectedColor, [productId]: color });
   };
 
+  // This function is used to update the total price of the cart.
   const handleBuy = (price) => {
     updateTotalPrice(totalPrice + price);
   };
