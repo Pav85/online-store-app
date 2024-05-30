@@ -16,11 +16,13 @@ const Home = () => {
   }, []);
 
   const handleLogin = () => {
-    if (name.trim()) {
-      setLoggedIn(true);
-      localStorage.setItem("name", name);
-      localStorage.setItem("loggedIn", "true");
+    if (!name.trim()) {
+      alert("Please enter your name.");
+      return;
     }
+    setLoggedIn(true);
+    localStorage.setItem("name", name);
+    localStorage.setItem("loggedIn", "true");
   };
 
   const handleLogout = () => {

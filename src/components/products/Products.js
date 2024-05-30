@@ -28,6 +28,7 @@ const Products = ({ totalPrice, updateTotalPrice }) => {
         setProducts(productsWithColors);
       } catch (error) {
         console.error("Error fetching products: ", error);
+        alert("Failed to fetch products. Please try again later.");
       }
     };
     fetchProducts();

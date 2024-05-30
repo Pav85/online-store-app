@@ -37,10 +37,13 @@ const About = () => {
         <Col md={4} className="text-center mt-4">
           <h2 className="text-center fs-2 mt-5 mb-5">Contact Us</h2>
           <p className="fs-5">
-            <strong>Email:</strong> contact@store.com
+            <strong>Email:</strong>{" "}
+            <a href="mailto:contact@myonlinestore.com">
+              contact@myonlinestore.com
+            </a>
           </p>
           <p className="fs-5">
-            <strong>Phone:</strong> (123) 456-7890
+            <strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a>
           </p>
         </Col>
         <Col md={8}>
@@ -54,8 +57,8 @@ const About = () => {
                 height="auto"
               />
               <Carousel.Caption>
-                <h3>Our Storefront</h3>
-                <p>A welcoming entrance to our store.</p>
+                <h3>Discover our latest collection!</h3>
+                <p>Shop now for exclusive deals and new arrivals.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -76,13 +79,15 @@ const About = () => {
                 className="d-block w-100"
                 src={storeImage3}
                 alt="Third slide"
-                // height={350}
                 width={400}
                 height="auto"
               />
               <Carousel.Caption>
-                <h3>Customer Favorites</h3>
-                <p>Popular items loved by our customers.</p>
+                <h3>Don't miss out!</h3>
+                <p>
+                  Enjoy our special sale with amazing discounts and offers. Shop
+                  today and save big!
+                </p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
