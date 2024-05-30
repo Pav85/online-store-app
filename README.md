@@ -27,4 +27,27 @@ npm install
 ```
 
 ## Deployment 
-https://pav85.github.io/online-store-app/
+
+Visit the live site here: [My Online Store](https://pav85.github.io/online-store-app/)
+
+Here's a preview of the application:
+
+![My Online Store Preview](./src/assets/screenshot.png)
+
+## Resources
+
+- Product data fetched from [Fake Store API](https://fakestoreapi.com/).
+- Built with [React](https://reactjs.org/), [React Router](https://reactrouter.com/), [React Bootstrap](https://react-bootstrap.netlify.app/), and [Axios](https://axios-http.com/).
+
+## Contributing
+
+Fork this repository and submit a pull request to contribute.
+
+## Questions
+
+For inquiries, please open an issue or contact me at pawel-werbowy@gmail.com. 
+Check out more of my work at [GitHub - Pav85](https://github.com/pav85).
+
+## License
+
+This project is licensed under the MIT license.
